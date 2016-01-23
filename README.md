@@ -13,8 +13,7 @@ An app that gives you the best experience.
 Accuweather - http://apidev.accuweather.com/developers/
 Google Maps - https://developers.google.com/maps/?hl=en
 Google Calendar - https://developers.google.com/google-apps/calendar/?hl=en
-Facebook API - Login/Messenging - 
-Instagram API - https://www.instagram.com/developer/
+Facebook API - Login/Messenging - Instagram API - https://www.instagram.com/developer/
 
 
 
