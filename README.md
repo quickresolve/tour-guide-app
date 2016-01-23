@@ -53,24 +53,24 @@ http://www.thebolditalic.com/map/?selectedHood=onlyInSf
 ###Interests List
 
 ####Day Activities
->Yoga
->Meditation
->Hiking
->Cycling
->Cafe's
->Volunteering
->Museums
->Beach
->Shopping
+*Yoga
+*Meditation
+*Hiking
+*Cycling
+*Cafe's
+*Volunteering
+*Museums
+*Beach
+*Shopping
 
 
 
 ####Night Life
->Sports Bars
->Dance Club
->Cocktail Bar
->Concert
->Theater
+*Sports Bars
+*Dance Club
+*Cocktail Bar
+*Concert
+*Theater
 
 
 
