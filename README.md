@@ -1,4 +1,4 @@
-<b> <font size="24px;">LetC</font> </b>
+<b> <font size="24px;">LetzC</font> </b>
 
 Matching tourists to locals. 
 
