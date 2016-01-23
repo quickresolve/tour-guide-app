@@ -49,6 +49,30 @@ http://www.thebolditalic.com/map/?selectedHood=onlyInSf
 26. Upper Market
 
 
+--------------
+###Interests List
+
+####Day Activities
+>Yoga
+>Meditation
+>Hiking
+>Cycling
+>Cafe's
+>Volunteering
+>Museums
+>Beach
+>Shopping
+
+
+
+####Night Life
+>Sports Bars
+>Dance Club
+>Cocktail Bar
+>Concert
+>Theater
+
+
 
 --------------
 <b> <font size="16px;">Git Commands</font> </b>
