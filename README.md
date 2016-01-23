@@ -1,4 +1,4 @@
-<b>Tour Guide App</b>
+<b> <font size="24px;">LetC</font> </b>
 
 Matching tourists to locals. 
 
@@ -6,8 +6,10 @@ An app that gives you the best experience.
 
 <i>San Francisco, your friendly city!</i>
 
-<b>API Links</b>
----------
+
+--------------
+<b> <font size="16px;">API Links</font> </b>
+
 Accuweather - http://apidev.accuweather.com/developers/
 Google Maps - https://developers.google.com/maps/?hl=en
 Google Calendar - https://developers.google.com/google-apps/calendar/?hl=en
@@ -15,10 +17,10 @@ Facebook API - Login/Messenging -
 Instagram API - https://www.instagram.com/developer/
 
 
---------------
-<b> Extra Info: </b>
 
-Git Commands:
+
+--------------
+<b> <font size="16px;">Git Commands</font> </b>
 
 <b> To obtain repository: </b>
 
@@ -26,11 +28,13 @@ Git Commands:
 
 <b> To push to repository: </b>
 
-1. git add --all
+1. cd tour-guide-app
 
-2. git commit -m "insert a message"
+2. git add --all
 
-3. git push origin master
+3. git commit -m "insert a message"
+
+4. git push origin master
 
 <b> To update repository: </b>
 
