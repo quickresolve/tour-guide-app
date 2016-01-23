@@ -50,27 +50,37 @@ http://www.thebolditalic.com/map/?selectedHood=onlyInSf
 
 
 --------------
+###Categories
+
+-Outdoor/Physical
+-Art/Culture
+-NightLife
+
+-------------
 ###Interests List
 
-####Day Activities
-*Yoga
-*Meditation
-*Hiking
-*Cycling
-*Cafe's
-*Volunteering
-*Museums
-*Beach
-*Shopping
+####Outdoor/Physical
+-Yoga
+-Meditation
+-Hiking
+-Cycling
+-Cafe's
+-Beach
 
 
+###Art/Culture
+-Museums
+-Shopping
+-Site Seeing
+-Volunteering
+-Theater
 
 ####Night Life
-*Sports Bars
-*Dance Club
-*Cocktail Bar
-*Concert
-*Theater
+-Sports Bars
+-Dance Club
+-Cocktail Bar
+-Concert
+
 
 
 
