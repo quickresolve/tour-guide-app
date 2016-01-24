@@ -1,0 +1,58 @@
+body {
+    background-image: url('../images/slideshow2.jpg') !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    font-family: Open Sans;
+}
+
+button:focus, button:active{
+    outline:none;
+}
+
+.signin {
+    margin: auto;
+    left: 0;
+    right: 0;
+    background-color: transparent !important;
+    color: #fff !important;
+    border-color: #fff !important;
+    margin-top: 20px;
+    border-radius: 3px !important;
+    width: 150px;
+    font-family: Open Sans;
+}
+
+.logo {
+    height: 210px !important;
+    width: auto;
+    margin: auto;
+    left: 0;
+    right: 0;
+    height: 50px;
+    margin-top: 100px;
+}
+
+.btn-info:hover {
+    background-color: #E74649 !important;
+    color: #fff !important;
+    border-color: #fff !important;
+}
+
+div#myModal div.modal-content {
+    padding: 20px;
+}
+
+div#myModal div.modal-content > form > h2.form-signin-heading {
+    margin-top: 0px;
+}
+
+form.form-signin > button[type="submit"]{
+    background-color: #E74649 !important;
+    border-color: #E74649 !important;
+}
+
+form.form-signin > input {
+    margin: 15px 0px;
+}
