@@ -24,7 +24,7 @@ else {
         // Start session
         session_start();
         $_SESSION['id'] = $user_id;
-        echo "dashboard.php?id=".$user_id;
+        echo "dashboard.php";
         return;
     }
 }

@@ -13,7 +13,7 @@ LOGIN_FORM.ajax = {
     sendLogin: function(loginURL,data){
         jQuery.post(loginURL + "_inc/login-handler.php", data, function(response){
             if(response.toLowerCase().indexOf('dashboard') > -1){
-                window.location.href = loginURL + response;
+                window.location.href = loginURL + "dashboard.php";
             }
             else {
                 LOGIN_FORM.helper.errorHandling(response);

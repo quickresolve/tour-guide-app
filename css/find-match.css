@@ -1,0 +1,13 @@
+.findlocal {
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#category-filters{
+    margin-bottom: 40px;
+}
+
+.img-circle {
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+}

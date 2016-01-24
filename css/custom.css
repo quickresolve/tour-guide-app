@@ -9,7 +9,7 @@ img {
 }
 
 img[src*="small_logo.png"] {
-    max-height: 26px;
+  max-height: 26px;
 }
 
 
@@ -81,25 +81,240 @@ input[type=checkbox]:checked + label::after {
 @media(min-width:798px){
   div#logged_in_profile {
     margin-top: 90px;
-}
+  }
 
 }
 
 .navbar-inverse .navbar-nav>li>a {
-    color: black !important;
+  color: black !important;
 }
 
 nav.navbar.navbar-inverse.navbar-static-top {
-    background-color: white;
+  background-color: white;
 }
 
 .navbar-inverse {
-    border-color: white !important;
+  border-color: white !important;
 }
 
-
-
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
-    color: black !important;
-    background-color: white !important;
+  color: black !important;
+  background-color: white !important;
+}
+
+ul.navbar-nav li.logout {
+  float: right;
+}
+
+a.logout, a.messaging {
+  color: black;
+  padding: 7px;
+  font-size:25px;
+}
+
+#contact-us .btn-primary{
+  border-color:#E74649;
+  background:#E74649;
+}
+
+a.messaging{
+  color:#E74649;
+}
+
+div#myCarousel {
+  margin-bottom: 30px;
+}
+
+h3.popover-title {
+  background: #E74649;
+  color: white;
+}
+
+.popover-content{
+  padding:9px 0px !important;
+  display:block;
+  float:left;
+}
+
+.popover-content ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.popover-content ul li {
+  padding: 0px;
+  margin: 0px;
+}
+
+.popover{
+  max-width:100%;
+}
+
+div.popover-content span.message-date {
+  font-size: 7px;
+}
+
+.popover-content li:first-child > div.col-md-3 {
+  padding: 0px;
+}
+
+.popover-content a {
+  color: black;
+  line-height:11px;
+}
+
+.popover-content a:hover, .popover-content a:focus {
+  color: black;
+  text-decoration: none;
+}
+
+span.message-date {
+  margin-top: 10px;
+  display: block;
+}
+
+div.popover-content .col-md-6 .row {
+  margin: 0px;
+}
+
+div.popover-content i.fa-trash{
+  cursor:pointer;
+}
+
+footer.container {
+  margin-top: 40px;
+}
+
+.activity_header h1 {
+  border-bottom: 1px solid #ea4444;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  padding-bottom: 9px;
+}
+
+body {
+  font-family: Tahoma;
+}
+
+header {
+  text-align: center;
+}
+
+#calendar {
+  width: 100%;
+}
+
+#calendar a {
+  color: #8e352e;
+  text-decoration: none;
+}
+
+#calendar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+#calendar li {
+  display: block;
+  float: left;
+  width:14.342%;
+  padding: 5px;
+  box-sizing:border-box;
+  border: 1px solid #ccc;
+  margin-right: -1px;
+  margin-bottom: -1px;
+}
+
+#calendar ul.weekdays {
+  height: 30px;
+  background:#E74649;
+}
+
+#calendar ul.weekdays li {
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 20px;
+  border: none !important;
+  padding: 5px 6px;
+  color: #fff;
+  font-size: 13px;
+}
+
+#calendar .days li {
+  height: 75px;
+}
+
+#calendar .days li:hover {
+  background: #d3d3d3;
+}
+
+#calendar .date {
+  text-align: center;
+  margin-bottom: 5px;
+  padding: 3px;
+  background: #333;
+  color: #fff;
+  width: 20px;
+  border-radius: 50%;
+  float: right;
+  height: 20px;
+  font-size: 11px;
+}
+
+#calendar .event {
+  clear: both;
+  display: block;
+  font-size: 12px;
+  border-radius: 4px;
+  padding: 5px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  line-height: 14px;
+  background: #e4f2f2;
+  border: 1px solid #b5dbdc;
+  color: #009aaf;
+  text-decoration: none;
+  display:none; /* Bitches */
+}
+
+#calendar .event-desc {
+  color: #666;
+  margin: 3px 0 7px 0;
+  text-decoration: none;
+}
+
+#calendar .other-month {
+  background: #f5f5f5;
+  color: #666;
+}
+
+.featurette-divider {
+  margin: 20px 0 !important;
+}
+
+/* ============================
+                Mobile Responsiveness
+   ============================*/
+
+
+@media(max-width: 768px) {
+
+  #calendar .weekdays, #calendar .other-month {
+    display: none;
+  }
+
+  #calendar li {
+    height: auto !important;
+    border: 1px solid #ededed;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: -1px;
+  }
+
+  #calendar .date {
+    float: none;
+  }
 }

@@ -3,7 +3,7 @@
   require_once('_inc/header.php');
 ?>
 
-<div class="container">
+<div class="container home">
 
   <div class="col-md-12 text-center">
     <img class="logo" src="images/logo.png" />
@@ -37,6 +37,109 @@
       
     </div>
   </div>
+  </div>
+
+<div class="col-md-12" style="background:white;">
+  <div class="container marketing">
+    <div class="col-lg-12 heading">
+      <center>
+        <p style="font-size: 24px; font-weight: 700;">
+          New to San Francisco?
+        </p>
+        <p style="font-size: 14px; font-weight: 300;">
+          Meet locals who can introduce you to the city
+        </p>
+      </center>
+    </div>
+
+    <?php echo $matches->matchList($user_id,3); ?>
+
+    <div class="col-lg-12">
+      <div class="col-lg-12 heading">
+        <center>
+          <p style="font-size: 24px; font-weight: 700;">
+            Explore the many neighborhoods in SF
+          </p>
+        </center>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-6 boxleft align-center">
+        <img src="images/home1.jpg" height="300px;"/>
+        <div style="padding-left: 0px;" class="col-lg-9">
+          <p style="font-size: 18px; font-weight: 700; margin-bottom: 0px !important;">
+            Tomo <img src="images/star.png" height="18px;"><img src="images/star.png" height="18px;"><img src="images/star.png" height="18px;"><img src="images/star.png" height="18px;">
+          </p>
+          <p style="font-size: 13px; font-weight: 300;">
+            Let me introduce you to the Japantown community
+          </p>
+        </div>
+        <div class="col-lg-3">
+          <img class="img-circle" src="images/profile9.jpg" alt="Generic placeholder image" width="70" height="70">
+        </div>
+      </div>
+
+      <div class="col-lg-6 boxright align-center">
+        <img src="images/home2.jpg" height="300px;"/>
+        <div style="padding-left: 0px;" class="col-lg-9">
+          <p style="font-size: 18px; font-weight: 700; margin-bottom: 0px !important;">
+            Jeff <img src="images/star.png" height="18px;"><img src="images/star.png" height="18px;"><img src="images/star.png" height="18px;"><img src="images/star.png" height="18px;">
+          </p>
+          <p style="font-size: 13px; font-weight: 300;">
+            I will show you the Mission district
+          </p>
+        </div>
+        <div class="col-lg-3">
+          <img class="img-circle" src="images/profile1.jpg" alt="Generic placeholder image" width="70" height="70">
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <br />
+
+    <div class="col-lg-12">
+      <div class="col-lg-12 heading">
+        <center>
+          <p style="font-size: 24px; font-weight: 700;">
+            Explore the arts &amp; culture of SF
+          </p>
+        </center>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-6 boxleft align-center">
+        <img src="images/home3.jpg" height="300px;"/>
+        <div style="padding-left: 0px;" class="col-lg-9">
+          <p style="font-size: 18px; font-weight: 700; margin-bottom: 0px !important;">
+            Tomo <img src="images/star.png" height="18px;"><img src="images/star.png" height="18px;"><img src="images/star.png" height="18px;"><img src="images/star.png" height="18px;">
+          </p>
+          <p style="font-size: 13px; font-weight: 300;">
+            I love to go to museums
+          </p>
+        </div>
+        <div class="col-lg-3">
+          <img class="img-circle" src="images/profile5.jpg" alt="Generic placeholder image" width="70" height="70">
+        </div>
+      </div>
+
+      <div class="col-lg-6 boxright align-center">
+        <img src="images/home4.jpg" height="300px;"/>
+        <div style="padding-left: 0px;" class="col-lg-9">
+          <p style="font-size: 18px; font-weight: 700; margin-bottom: 0px !important;">
+            Lauren <img src="images/star.png" height="18px;"><img src="images/star.png" height="18px;">
+          </p>
+          <p style="font-size: 13px; font-weight: 300;">
+            Jazz music is my favorite
+          </p>
+        </div>
+        <div class="col-lg-3">
+          <img class="img-circle" src="images/profile4.jpg" alt="Generic placeholder image" width="70" height="70">
+        </div>
+      </div>
+      </div>
   <script src="js/login-ajax.js" type="text/javascript"></script>
   <script>
     jQuery(document).ready(function(){

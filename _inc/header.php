@@ -1,7 +1,20 @@
 <?php
-    require_once('connect.php');
-    require_once('helper.functions.php');
-    $homepath = "http://localhost/~mattmiller/let-c/";
+require_once('connect.php');
+$homepath = "http://localhost/~mattmiller/let-c/";
+require_once('classes/user.match.php');
+$matches = new LetZC_Match(0,$mysqli,$homepath);
+
+if(isset($_SESSION['id'])){
+    require_once('classes/user.class.php');
+    require_once('classes/messages.class.php');
+    $user_id = $_SESSION['id'];
+    $user = new LetZC_User($user_id,$mysqli,$homepath);
+    $messages = new LetZC_Messages($user_id,$mysqli,$homepath);
+}
+else if(!$login){
+    header('Location:login.php');
+}
+require_once('helper.functions.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,6 +26,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/custom.css">
 
@@ -20,6 +34,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/ekko-lightbox.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -46,93 +61,36 @@
 <!-- NAVBAR
 ================================================== -->
 <body>
+<?php if(!$login) { ?>
+    <div class="navbar-wrapper">
+        <div class="container">
 
-<?php
-    // Non-login info
-    if(!$login){
-?>
-
-<div class="navbar-wrapper">
-    <div class="container">
-
-        <nav class="navbar navbar-inverse navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#"><img src="images/small_logo.png"></a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li <?=echoActive("dashboard"); ?>><a href="<?php echo $homepath."dashboard.php?user_id=1"; ?>">Home</a></li>
-                        <li <?=echoActive("find-match"); ?>><a href="<?php echo $homepath."find-match.php"; ?>">Find a Match</a></li>
-                        <li <?=echoActive("categories"); ?>><a href="<?php echo $homepath."categories.php"; ?>">Categories/Interests/Places</a></li>
-                        <li <?=echoActive("contact"); ?>><a href="<?php echo $homepath."contact.php"; ?>">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-    </div>
-</div>
-
-
-        <!-- Carousel
-          ================================================== -->
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <img class="first-slide" src="images/slideshow2.jpg" alt="First slide">
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <img src="images/logo.png">
-
-                        </div>
+            <nav class="navbar navbar-inverse navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header col-md-1">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"><img src="images/small_logo.png"></a>
                     </div>
+                    <div id="navbar" class="navbar-collapse collapse col-md-11">
+                        <ul class="nav navbar-nav">
+                            <li <?= echoActive("dashboard"); ?>><a href="<?php echo $homepath . "dashboard.php"; ?>">My Profile</a>
+                            </li>
+                            <li <?= echoActive("find-match"); ?>><a href="<?php echo $homepath . "find-match.php"; ?>">Find
+                                    a Local</a></li>
+                            <li <?= echoActive("contact"); ?>><a
+                                    href="<?php echo $homepath . "contact.php"; ?>">Contact</a></li>
+                        </ul>
+                    </div>
+                    <a href="<?php echo $homepath . "logout.php"; ?>" class="logout pull-right"><i class="fa fa-sign-out"></i></a>
+                    <a class="messaging pull-right" href="#" title="Header" data-placement="bottom" data-width="350" data-toggle="popover" data-html="true" data-content="<?php echo $messages->getMessagePreview(); ?>"><i class="fa fa-envelope-square"></i></a>
                 </div>
-
-                <!-- <div class="item">
-                 <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
-                 <div class="container">
-                   <div class="carousel-caption">
-                     <h1>Another example headline.</h1>
-                     <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                     <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-                   </div>
-                 </div>
-               </div>
-
-               <div class="item">
-                 <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
-                 <div class="container">
-                   <div class="carousel-caption">
-                     <h1>One more for good measure.</h1>
-                     <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                     <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-                   </div>
-                 </div>
-               </div> -->
-
-
-
-            </div>
-            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div><!-- /.carousel -->
+            </nav>
+        </div>
+    </div>
 <?php } ?>
